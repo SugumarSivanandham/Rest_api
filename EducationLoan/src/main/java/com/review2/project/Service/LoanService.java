@@ -14,6 +14,8 @@ import com.review2.project.Repository.LoanApplicationRepo;
 import com.review2.project.Repository.LoginRepo;
 import com.review2.project.Repository.UserRepo;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class LoanService {
 	@Autowired
@@ -83,9 +85,10 @@ public class LoanService {
     	 return lrepo.saveAndFlush(amodel5);
      }
      
+     @Transactional
      public void delete3(String password)
      {
-    	 lrepo.deleteById(password);
+    	 lrepo.deleteBypass(password);
      }
      
      //UserModel

@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 	import com.review2.project.Service.LoanService;
 
 	@RestController
-	@CrossOrigin
+//	@CrossOrigin
 	public class LoanController {
 		@Autowired
 	    public LoanService lser;

@@ -5,6 +5,8 @@ package com.review2.project.Repository;
 
 	public interface LoginRepo extends JpaRepository<LoginModel,String>{
 
+		void deleteBypass(String password);
+
 	}
 
 
